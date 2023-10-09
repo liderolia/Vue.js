@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>Задание 1</h2>
+        <p style="width: 500px">Создать кнопку "Перевернуть". При клике на кнопку текст кнопки должен перевернуться и
+            отобразиться в обратном порядке.</p>
+        <button @click="reversButton = reversButton.split('').reverse('').join('')">{{reversButton}}</button>
+        <br>
+        <h2>Задание 2 и 3</h2>
+        <p style="width: 500px"> Задание 2: Есть список элементов. Пользователь может добавлять новые элементы списка с
+            текстом
+            “Новый элемент списка” нажав на кнопку "Добавить".<br><br>Задание 3: При клике на элемент списка он должен
+            быть удален.</p>
+        <ol id="elements" @click="deleteElement">
+            <li>Элемент списка</li>
+        </ol>
+        <button @click="addElement">Добавить</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const App = {
+            data() {
+                return {
+                    reversButton: "Перевернуть"
+                }
+            },
+
+            methods: {
+                addElement() {
+                    const elem = document.createElement("li");
+                    elem.innerText = "Новый элемент списка";
+                    const list = document.getElementById("elements");
+                    list.appendChild(elem);
+                },
+                deleteElement() {
+                    const list = document.getElementById("elements");
+                    if (list.childNodes.length > 1) {
+                        list.lastChild.remove();
+                    }
+                }
+            },
+        }
+        Vue.createApp(App).mount('#app');
+    </script>
+
+</body>
+
+</html>
