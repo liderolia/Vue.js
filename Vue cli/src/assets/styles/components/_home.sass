@@ -1,0 +1,178 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+
+.home
+    &__banner
+        display: block
+        background-image: url("../img/banner.png")
+        background-repeat: no-repeat
+        background-size: 116%
+        height: 755px
+        border-radius: $bigRadius
+        background-position: 60% 42%
+
+        &_content
+            display: flex
+            flex-direction: column
+            padding: 200px 0 0 $gapBasic
+            max-width: 480px
+            gap: 20px
+
+.button
+    margin: 20px 0 0 $gapBasic
+    @include buttonBasic
+    gap: $gapMin
+
+.button:hover
+    @include buttonBasicHover
+
+.preview
+    padding: $spaceBetween 0
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__content
+        display: flex
+        align-items: center
+        flex-direction: column
+        text-align: center
+        max-width: 750px
+        gap: $gapMin
+        padding-bottom: $spaceBetween
+
+    &__product
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: 55px
+        column-gap: 100px
+        //display: grid
+        //grid-template-columns: 50% 50%
+        //grid-row-gap: 55px
+        //grid-column-gap: 100px
+
+        & div:nth-child(1) img
+            border-top-right-radius: 80px
+        & div:nth-child(2) img
+            border-top-left-radius: 80px
+        & div:nth-child(3) img
+            border-bottom-right-radius: 80px
+        & div:nth-child(4) img
+            border-bottom-left-radius: 80px
+
+        &_card
+            max-width: 550px
+
+        &_content
+            padding-top: 25px
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+        &_content a
+            font-family: 'dm_serif_displayregular'
+            font-style: normal
+            font-weight: 400
+            color: $colorText
+            line-height: 125%
+            font-size: 1.25rem
+
+        &_svg:hover svg path
+            stroke: $colorDecor
+
+.color
+    height: 460px
+    background-color: $colorBackground
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+        width: calc($withSite/4)
+        height: 130px
+        gap: 15px
+        border-right: 1px solid $colorDecor
+        &:last-child
+            border-right: 0
+
+        & span
+            font-family: 'dm_serif_displayregular'
+            font-style: normal
+            color: $colorDecor
+            line-height: 125%
+            font-size: 4.25rem
+            letter-spacing: 1.7px
+
+.blog
+    padding: $spaceBetween 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: fit-content
+
+    &__content
+        display: flex
+        align-items: center
+        flex-direction: column
+        text-align: center
+        max-width: 800px
+        gap: $gapMin
+        padding-bottom: 50px
+
+    &__product
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        gap: 25px
+
+        &_card
+            width: 0.34 * $withSite - 25px
+            height: 521px
+            padding: 20px
+            border-radius: $bigRadius
+            background-color: $colorBasic
+            border: 1px solid #E7E7E7
+
+            & img
+                border-radius: 45px 45px 0 0
+
+        &_card:hover
+            background-color: $colorBackground
+
+        &_title
+            height: 110px
+            width: 90%
+
+        &_imgcontent
+            position: relative
+            margin-bottom: $gapMin
+
+        &_tag
+            position: absolute
+            left: 20px
+            bottom: 20px
+            padding: 8px 10px
+            border: 1px solid $colorBasic
+            background-color: $colorBasic
+            border-radius: 8px 8px 8px 0px
+            font-size: 0.8rem
+
+        &_content
+            display: flex
+            align-items: center
+            justify-content: space-between
+            & p
+                font-size: 16px
+
+.blog__product_card:hover .blog__product_content svg circle
+    fill: $colorBasic
+
+.blog__product_svg:hover svg path, .blog__product_svg:active svg path
+    stroke: $colorDecor

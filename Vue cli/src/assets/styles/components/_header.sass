@@ -1,0 +1,27 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+
+.header
+    height: 150px
+    background: $colorBasic
+    display: flex
+    align-items: center
+    justify-content: space-between
+    z-index: 999
+
+    &__left
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 10px
+        font-family: 'dm_serif_displayregular'
+        font-size: 2rem
+        color: $colorTitle
+
+    &__right
+        display: flex
+        align-items: center
+        gap: $gapBasic
+        & a
+            color: $colorTitle

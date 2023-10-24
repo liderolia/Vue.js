@@ -1,0 +1,39 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+
+.footer
+    padding-bottom: 135px
+    display: flex
+    flex-wrap: wrap
+    gap: 100px
+
+    &__header
+        height: 60px
+
+    &__logo
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 10px
+        font-family: 'dm_serif_displayregular'
+        font-size: 2rem
+
+    &__content
+        max-width: 395px
+        min-width: 125px
+        display: grid
+        grid-template-rows: repeat(3, max-content)
+        gap: 30px
+        & a
+            line-height: 150%
+            font-size: 1.1rem
+        &_messenger
+            display: flex
+            gap: 55px
+
+            & svg path
+                fill: $colorText
+
+            & a:hover svg path
+                fill: $colorDecor
