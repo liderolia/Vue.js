@@ -253,7 +253,7 @@ export default {
       ],
 
       buttoms: [
-        { id: "Kitchen", tag: "Kitchen", focus },
+        { id: "Kitchen", tag: "Kitchen" },
         { id: "Bedroom", tag: "Bedroom" },
         { id: "Building", tag: "Building" },
         { id: "Architecture", tag: "Architecture" },
