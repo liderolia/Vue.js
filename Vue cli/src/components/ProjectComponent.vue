@@ -1,15 +1,6 @@
 <template>
   <div class="top">
-    <section class="banner project_site">
-      <div class="banner__intro">
-        <h2>Our Project</h2>
-        <div class="banner__intro_link">
-          <a href="index.html">Home</a>
-          <p>/</p>
-          <a href="project.html">Project</a>
-        </div>
-      </div>
-    </section>
+    <BannerComponent :info="bannerInfo" />
     <section id="app" class="categories center">
       <nav class="categories__button">
         <button
@@ -116,6 +107,7 @@
 </template>
 
 <script>
+import BannerComponent from "./BannerComponent.vue";
 import PaginationComponent from "./PaginationComponent.vue";
 import imgProject001 from "../assets/img/project01.png";
 import imgProject002 from "../assets/img/project02.png";
@@ -135,11 +127,11 @@ import imgProject015 from "../assets/img/blog_6.png";
 import imgProject016 from "../assets/img/post.png";
 import imgProject017 from "../assets/img/blog_2.png";
 import imgProject018 from "../assets/img/blog_5.png";
-import imgProject019 from "../assets/img/product_4.png";
-import imgProject020 from "../assets/img/article_basic_Architecture.jpeg";
+import imgProject019 from "../assets/img/article_basic_Architecture.jpeg";
+import imgProject020 from "../assets/img/product_4.png";
 
 export default {
-  components: { PaginationComponent },
+  components: { BannerComponent, PaginationComponent },
   data() {
     const projects = [
       {
@@ -167,7 +159,7 @@ export default {
         id: 4,
         tag: "Bed Room",
         img: imgProject004,
-        title: "Modern Medroom",
+        title: "Modern Bedroom",
         text: "Decor / Artchitecture",
       },
       {
@@ -188,7 +180,7 @@ export default {
         id: 7,
         tag: "Bed Room",
         img: imgProject007,
-        title: "System Table",
+        title: "System Bedroom",
         text: "Decor / Artchitecture",
       },
       {
@@ -203,28 +195,28 @@ export default {
         id: 9,
         tag: "Bathroom",
         img: imgProject009,
-        title: "Modern Bedroom",
+        title: "Modern Bathroom",
         text: "Decor / Artchitecture",
       },
       {
         id: 10,
         tag: "Bathroom",
         img: imgProject010,
-        title: "Modern Bedroom",
+        title: "Modern Bathroom",
         text: "Decor / Artchitecture",
       },
       {
         id: 11,
         tag: "Bathroom",
         img: imgProject011,
-        title: "Modern Bedroom",
+        title: "Modern Bathroom",
         text: "Decor / Artchitecture",
       },
       {
         id: 12,
         tag: "Bathroom",
         img: imgProject012,
-        title: "Modern Bedroom",
+        title: "Modern Bathroom",
         text: "Decor / Artchitecture",
       },
 
@@ -232,57 +224,56 @@ export default {
         id: 13,
         tag: "Kitchan",
         img: imgProject013,
-        title: "Modern Medroom",
+        title: "Modern Kitchan",
         text: "Decor / Artchitecture",
       },
       {
         id: 14,
         tag: "Kitchan",
         img: imgProject014,
-        title: "Minimal Bedroom",
+        title: "Minimal Kitchan",
         text: "Decor / Artchitecture",
       },
       {
         id: 15,
         tag: "Kitchan",
         img: imgProject015,
-        title: "Modern Bedroom",
+        title: "Modern Kitchan",
         text: "Decor / Artchitecture",
       },
       {
         id: 16,
         tag: "Kitchan",
         img: imgProject016,
-        title: "System Table",
+        title: "System Kitchan",
         text: "Decor / Artchitecture",
       },
       {
         id: 17,
         tag: "Kitchan",
         img: imgProject017,
-        title: "Modern Bedroom",
+        title: "Modern Kitchan",
         text: "Decor / Artchitecture",
       },
-
       {
         id: 18,
         tag: "Living Area",
         img: imgProject018,
-        title: "Modern Bedroom",
+        title: "Modern Living Area",
         text: "Decor / Artchitecture",
       },
       {
         id: 19,
         tag: "Living Area",
         img: imgProject019,
-        title: "Modern Bedroom",
+        title: "System Living Area",
         text: "Decor / Artchitecture",
       },
       {
         id: 20,
         tag: "Living Area",
         img: imgProject020,
-        title: "Modern Bedroom",
+        title: "Modern Living Area",
         text: "Decor / Artchitecture",
       },
     ];
@@ -353,6 +344,15 @@ export default {
           text: "Decor / Artchitecture",
         },
       ],
+
+      bannerInfo: {
+        img: require("../assets/img/project_background.png"),
+        title: "Our Project",
+        url1: "index.html",
+        url2: "project.html",
+        link1: "Home",
+        link2: "Project",
+      },
     };
   },
 

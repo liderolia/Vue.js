@@ -1,15 +1,6 @@
 <template>
   <div class="top">
-    <section class="banner">
-      <div class="banner__intro">
-        <h2>Articles & News</h2>
-        <div class="banner__intro_link">
-          <a href="index.html">Home</a>
-          <p>/</p>
-          <a href="blog.html">Blog</a>
-        </div>
-      </div>
-    </section>
+    <BannerComponent :info="bannerInfo" />
     <section class="post center">
       <h2>Latest Post</h2>
       <div class="post__card">
@@ -93,6 +84,7 @@
 </template>
 
 <script>
+import BannerComponent from "./BannerComponent.vue";
 import PaginationComponent from "./PaginationComponent.vue";
 
 export default {
@@ -136,11 +128,20 @@ export default {
           date: "25 December,2022",
         },
       ],
+
+      bannerInfo: {
+        img: require("../assets/img/blog_background.png"),
+        title: "Articles & News",
+        url1: "index.html",
+        url2: "blog.html",
+        link1: "Home",
+        link2: "Blog",
+      },
     };
   },
 
   methods: {},
-  components: { PaginationComponent },
+  components: { BannerComponent, PaginationComponent },
 };
 </script>
 
