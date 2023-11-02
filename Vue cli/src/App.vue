@@ -2,8 +2,9 @@
   <HeaderComponent />
   <HomeComponent />
   <BlogComponent />
-  <DetailsComponent />
+  <BlogDetailsComponent />
   <ProjectComponent />
+  <ProjectDetailsComponent />
   <FooterComponent />
   <!-- <ProductDetails :available="false" /> -->
   <!-- <ProductDetails :available="true" /> -->
@@ -13,10 +14,11 @@
 import HeaderComponent from "./components/HeaderComponent.vue";
 import HomeComponent from "./components/HomeComponent.vue";
 import BlogComponent from "./components/BlogComponent.vue";
-import DetailsComponent from "./components/DetailsComponent.vue";
+import BlogDetailsComponent from "./components/BlogDetailsComponent.vue";
 import ProjectComponent from "./components/ProjectComponent.vue";
+import ProjectDetailsComponent from "./components/ProjectDetailsComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
-import ProductDetails from "./components/ProductDetails.vue";
+// import ProductDetails from "./components/ProductDetails.vue";
 
 export default {
   name: "App",
@@ -24,10 +26,11 @@ export default {
     HeaderComponent,
     HomeComponent,
     BlogComponent,
-    DetailsComponent,
+    BlogDetailsComponent,
     ProjectComponent,
+    ProjectDetailsComponent,
     FooterComponent,
-    ProductDetails,
+    // ProductDetails,
   },
 };
 </script>
