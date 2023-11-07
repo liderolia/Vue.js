@@ -6,6 +6,7 @@
   <ProjectComponent />
   <ProjectDetailsComponent />
   <FooterComponent />
+  <NotFoundComponent />
   <!-- <ProductDetails :available="false" /> -->
   <!-- <ProductDetails :available="true" /> -->
 </template>
@@ -18,6 +19,7 @@ import BlogDetailsComponent from "./components/BlogDetailsComponent.vue";
 import ProjectComponent from "./components/ProjectComponent.vue";
 import ProjectDetailsComponent from "./components/ProjectDetailsComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import NotFoundComponent from "./components/NotFoundComponent.vue";
 // import ProductDetails from "./components/ProductDetails.vue";
 
 export default {
@@ -30,6 +32,7 @@ export default {
     ProjectComponent,
     ProjectDetailsComponent,
     FooterComponent,
+    NotFoundComponent,
     // ProductDetails,
   },
 };
