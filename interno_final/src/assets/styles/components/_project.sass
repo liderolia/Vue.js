@@ -1,0 +1,73 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+
+.project_site
+    background-image: url("../img/project_background.png")
+    background-position: 0 61%
+
+.categories
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 200px
+    padding-bottom: 60px
+
+    &__button
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        border-radius: 20px
+        border: 1px solid $colorDecor
+        gap: 10px
+        width: content
+
+        &_style
+            text-align: center
+            font-family: 'jostregular'
+            color: $colorTitle
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            letter-spacing: 0.36px
+            border: none
+            background-color: $colorBasic
+            padding: 25px 65px
+            border-radius: 18px
+            cursor: pointer
+            &:focus
+                color: $colorBasic
+                background-color: $colorDecor
+
+.project
+    display: flex
+
+    &__card_column
+        column-width: 585px
+        column-gap: 25px
+        column-count: 2
+
+    &__card
+        break-inside: avoid-column
+        position: relative
+
+        & img
+            width: 100%
+            height: auto
+            cursor: pointer
+
+        &_favorites
+            position: absolute
+            top: 2px
+            right: 1px
+            cursor: pointer
+
+            &:hover svg path
+                fill: #FFA928
+
+        &_content
+            padding-top: 25px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 30px

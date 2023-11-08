@@ -1,0 +1,52 @@
+@import "../vars"
+@import "../mixin"
+@import "../setting"
+.pagination
+    display: flex
+    justify-content: center
+    align-items: center
+    padding-top: 20px
+    padding-bottom: 200px
+    gap: 20px
+
+    & label
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 50px
+        width: 50px
+        border-radius: 50%
+        background-color: $colorBasic
+        border: 1px solid $colorDecor
+
+    & label:hover,
+    & label:active
+        border: 1px solid $colorBackground
+        background-color: $colorBackground
+        color: $colorText
+
+    &__list
+        display: flex
+        gap: 20px
+        list-style-type: none
+        padding: 0
+
+    &__list li a
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 50px
+        width: 50px
+        font-size: 16px
+        font-style: normal
+        font-weight: 600
+        line-height: 150%
+        border-radius: 50%
+        background-color: $colorBasic
+        border: 1px solid $colorDecor
+
+    &__list li:hover a,
+    &__list li:active a
+        border: 1px solid $colorBackground
+        background-color: $colorBackground
+        color: $colorText
